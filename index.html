@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neon Match 3 Deluxe</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+  <header>
+    <div id="score">Score: 0</div>
+    <div id="combo">Combo: x1</div>
+    <button id="pauseBtn">⏸</button>
+  </header>
+
+  <canvas id="game" width="360" height="360"></canvas>
+
+  <div id="overlay" class="hidden">
+    <h1>Paused</h1>
+    <button id="resume">Resume</button>
+    <button id="restart">Restart</button>
+  </div>
+</div>
+
+<audio id="bgm" src="audio/bgm.mp3" loop></audio>
+<audio id="click" src="audio/click.wav"></audio>
+<audio id="match" src="audio/match.wav"></audio>
+<audio id="comboSound" src="audio/combo.wav"></audio>
+
+<script src="config.js"></script>
+<script src="state.js"></script>
+<script src="utils.js"></script>
+<script src="audio.js"></script>
+<script src="ui.js"></script>
+<script src="input.js"></script>
+<script src="board.js"></script>
+<script src="matcher.js"></script>
+<script src="gravity.js"></script>
+<script src="particles.js"></script>
+<script src="animation.js"></script>
+<script src="gameLoop.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
