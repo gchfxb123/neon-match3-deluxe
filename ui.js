@@ -12,3 +12,12 @@ const UI = {
     this.overlay.classList.toggle("hidden", !show);
   }
 };
+updateCoins() {
+  document.getElementById("coins").textContent =
+    "Coins: " + Currency.coins;
+},
+
+updateLevel() {
+  document.getElementById("level").textContent =
+    "Level " + Levels.current;
+}
