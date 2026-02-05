@@ -27,3 +27,21 @@ function loop() {
   }
   requestAnimationFrame(loop);
 }
+function loop() {
+  if (STATE.paused) return requestAnimationFrame(loop);
+
+  ctx.save();
+  Camera.apply(ctx);
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  Animation.update();
+  drawBoard();
+  Particles.update(ctx);
+
+  ctx.restore();
+
+  UI.update();
+  DailyChallenge.check(STATE.score);
+
+  requestAnimationFrame(loop);
+}
