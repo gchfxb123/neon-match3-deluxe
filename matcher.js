@@ -39,3 +39,9 @@ const Matcher = {
     return matches;
   }
 };
+if (matches.length > 0) {
+  STATE.combo++;
+  STATE.score += matches.length * CONFIG.baseScore * STATE.combo;
+  AudioSystem.play("match");
+  Camera.shake(8);
+}
